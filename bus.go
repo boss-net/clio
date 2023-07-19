@@ -1,13 +1,13 @@
 package clio
 
 import (
-	"github.com/wagoodman/go-partybus"
+	"github.com/sulaiman-coder/goeventbus"
 )
 
-type BusConstructor func(Config) *partybus.Bus
+type BusConstructor func(Config) *eventbus.Bus
 
 var _ BusConstructor = newBus
 
-func newBus(_ Config) *partybus.Bus {
-	return partybus.NewBus()
+func newBus(_ Config) *eventbus.Bus {
+	return eventbus.NewBus()
 }
